@@ -72,7 +72,7 @@ int main() {
             state_of_game = 1;
             std::cout << "CONGRATULATIONS!" << std::endl;
         }
-        if(number_of_guesses == 6){
+        if(number_of_guesses == 6 && entry != answer){
             state_of_game = 1;
             std::cout << "The word was: " << answer << std::endl;
             std::cout << "TRY AGAIN NEXT TIME!" << std::endl;
