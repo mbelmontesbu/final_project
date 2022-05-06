@@ -31,6 +31,29 @@ public:
         colorblock = c.get_code();
     }
 
+    char get_char(){
+        return letter;
+    }
+
+    char get_pos(){
+        return position;
+    }
+
+    color get_color(){
+        if (colorblock == "\u001b[42m"){
+            color green('g');
+            return green;
+        }
+        else if (colorblock == "\u001b[43m"){
+            color yellow('y');
+            return yellow;
+        }
+        else if (colorblock == "\u001b[47m"){
+            color white('w');
+            return white;
+        }
+    }
+
 friend std::ostream& operator<< (std::ostream& os, const letter_block& l);
 };
 
