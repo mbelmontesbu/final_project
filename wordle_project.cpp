@@ -82,8 +82,7 @@ int main() {
 }
 
 //Define Functions
-
-void print_word(std::vector<letter_block> &word){
+void print_word(std::vector<letter_block> &word){ //print string of letter_blocks to console
     for (auto e:word){
         std::cout<<e;
     }
