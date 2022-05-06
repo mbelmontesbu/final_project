@@ -8,7 +8,7 @@ The list of all available words that could be slected as the answer are in dicti
 
 Some assumptions that were made when creating this project are that I will not test whetehr the guess entered is an actual word and that there are no 5 letter words that have two of the same double letter pairs in it. For example, "eeted", which is not a word, if guessed could properly color the first two e's as yellow, however, improprly color the third e as white for the correct answer of sheep. However, this is an extreme edge case for those who are not guessing real words.
 
-As a test, when compiling in debug mode (make DEBUG=TRUE), the answer will always be "sheep" and the program will display the answer as well, allowing you to guess while knowing what the answer is. I found this word the best to test double letters against. I usual test I would try is guessing words like "essay" and "three" to test how to program would deal with double s's and double e's. Also in debug mode, the program asserts that you enter a correct character of the alphabet.
+As a test, when compiling in debug mode (make DEBUG=TRUE), the answer will always be "sheep" and the program will display the answer as well, allowing you to guess while knowing what the answer is. I found this word the best to test double letters against. A usual test I would try is guessing words like "essay" and "three" to test how the program would deal with double s's and double e's. Also in debug mode, the program asserts that you enter a correct character of the alphabet.
 
 
 
