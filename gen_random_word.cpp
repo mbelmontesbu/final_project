@@ -1,3 +1,4 @@
+//Generates Random Word from dictionary.txt
 #include <iostream>
 #include <fstream>
 #include <string>

@@ -44,19 +44,19 @@ int main() {
         std::vector<letter_block> blocked_word;
         std::string comp_answer = answer;
 
-        for(int i = 0; i < 5; ++i){
-            letter_block letter(entry[i],white,i); //defaults to incorrect
+        for(int i = 0; i < 5; ++i){ //tests for green and white squares
+            letter_block letter(entry[i],white,i); //defaults to incorrect (white)
             auto pos = std::find(comp_answer.begin(), comp_answer.end(), entry[i]);
-            if(pos-comp_answer.begin() == i){ //letter in word and correct position
+            if(comp_answer[i] == entry[i]){ //letter in word and correct position
                 letter.change_color(green);
                 comp_answer.replace(pos,pos+1,"A");
             }
             blocked_word.push_back(letter);
         }
-        
+
         for(int i = 0; i <5; ++i){ //tests yellow squares
             auto pos = std::find(comp_answer.begin(), comp_answer.end(), entry[i]);
-            if((pos-comp_answer.begin() != i) && (pos != comp_answer.end()) && (blocked_word[i].get_color().get_char() != green.get_char())){
+            if((pos-comp_answer.begin() != i) && (pos != comp_answer.end())){
                 comp_answer.replace(pos,pos+1,"A");
                 blocked_word[i].change_color(yellow);
             }
