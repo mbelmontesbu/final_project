@@ -74,7 +74,7 @@ int main() {
         }
         if(number_of_guesses == 6){
             state_of_game = 1;
-            std::cout << "THE WORD WAS " << answer << std::endl;
+            std::cout << "The word was: " << answer << std::endl;
             std::cout << "TRY AGAIN NEXT TIME!" << std::endl;
         }
         
