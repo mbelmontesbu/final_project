@@ -29,7 +29,6 @@ public:
     //get color code
     std::string get_code() {
         switch (color_char){
-
             case 'w':
                 return "\u001b[47m";
 
@@ -45,4 +44,10 @@ public:
         }
     }
 };
+
+//color constants
+color green('g');
+color yellow('y');
+color white('w');
+
 #endif

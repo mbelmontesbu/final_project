@@ -41,23 +41,25 @@ public:
 
     color get_color(){
         if (colorblock == "\u001b[42m"){
-            color green('g');
             return green;
         }
         else if (colorblock == "\u001b[43m"){
-            color yellow('y');
             return yellow;
         }
         else if (colorblock == "\u001b[47m"){
-            color white('w');
+            return white;
+        }
+        else{
             return white;
         }
     }
 
-friend std::ostream& operator<< (std::ostream& os, const letter_block& l);
+    friend std::ostream& operator<< (std::ostream& os, const letter_block& l);
+
 };
 
 std::ostream& operator<< (std::ostream& os, const letter_block& l){
+    assert(l.letter > char(0));
     os << l.colorblock << "\u001b[30m " << char(toupper(l.letter)) << " \u001b[0m";
     return os;
 }
